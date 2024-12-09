@@ -31,7 +31,7 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="/logo.png"
+            src="/logo.webp"
             alt="Logo"
             className="h-12 w-12 sm:h-20 sm:w-20 object-contain"
           />

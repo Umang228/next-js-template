@@ -7,7 +7,7 @@ const Subscribe = () => {
       {/*  Image  */}
       <div className="flex justify-center items-center h-full w-full">
         <img
-          src="/subscribe.png"
+          src="/subscribe.webp"
           className="rounded-lg object-cover w-full h-full"
           alt="Subscribe"
         />

@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="flex-shrink-0 mb-8 mr-5 md:mb-0">
             <img 
-              src="/logo.png" 
+              src="/logo.webp" 
               alt="weframetech logo" 
               className="h-16 md:h-24" 
             />

@@ -1,5 +1,9 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { HeartIcon,ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import React, { useRef, useState, useEffect } from "react";
+import {
+  HeartIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+} from "@heroicons/react/24/outline";
 
 interface ArticlesProps {
   title: string;
@@ -15,45 +19,46 @@ const Articles: React.FC<ArticlesProps> = ({ title, itemCount }) => {
     const checkScrollability = () => {
       if (scrollContainerRef.current) {
         setIsScrollable(
-          scrollContainerRef.current.scrollWidth > scrollContainerRef.current.clientWidth
+          scrollContainerRef.current.scrollWidth >
+            scrollContainerRef.current.clientWidth
         );
       }
     };
 
     checkScrollability();
-    window.addEventListener('resize', checkScrollability);
+    window.addEventListener("resize", checkScrollability);
 
     return () => {
-      window.removeEventListener('resize', checkScrollability);
+      window.removeEventListener("resize", checkScrollability);
     };
   }, [itemCount]);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: "smooth" });
     }
   };
 
   // Dynamic width based on itemCount
   const getCardWidth = () => {
     if (itemCount <= 3) {
-      return 'w-full md:w-[450px]';
+      return "w-full md:w-[450px]";
     } else {
-      return 'w-full md:w-[350px]';
+      return "w-full md:w-[350px]";
     }
   };
 
   return (
     <div className="w-full p-4 md:p-6">
-      <div className="flex justify-between items-center mb-4 md:mb-6">
-        <h2 className="text-lg md:text-2xl font-meduim">{title}</h2>
-        <button className="text-sm md:text-base font-medium underline">
+      <div className="flex flex-col md:flex-row justify-between items-center mb-4 md:mb-6">
+        <h2 className="text-lg md:text-2xl font-medium text-center md:text-left mb-2 md:mb-0">{title}</h2>
+        <button className="text-sm md:text-base font-medium underline text-center md:text-right">
           VOIR TOUTE LA COLLECTION
         </button>
       </div>
@@ -73,7 +78,7 @@ const Articles: React.FC<ArticlesProps> = ({ title, itemCount }) => {
         <div
           ref={scrollContainerRef}
           className={`w-full flex gap-4 md:gap-6 overflow-x-auto scroll-smooth no-scrollbar ${
-            itemCount <= 3 ? 'justify-around' : ''
+            itemCount <= 3 ? "justify-around" : ""
           }`}
         >
           {items.map((item, index) => (
@@ -88,7 +93,7 @@ const Articles: React.FC<ArticlesProps> = ({ title, itemCount }) => {
                 </div>
 
                 <img
-                  src="/product/image-2.png"
+                  src="/product/image-2.webp"
                   alt="Item"
                   className="w-1/2 h-1/2 md:w-2/3 md:h-2/3 object-cover"
                 />
@@ -96,8 +101,12 @@ const Articles: React.FC<ArticlesProps> = ({ title, itemCount }) => {
 
               <div className="p-2 md:p-4">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-base md:text-lg font-medium text-left">Title</h3>
-                  <p className="text-sm md:text-base font-bold text-right">0€</p>
+                  <h3 className="text-base md:text-lg font-medium text-left">
+                    Title
+                  </h3>
+                  <p className="text-sm md:text-base font-bold text-right">
+                    0€
+                  </p>
                 </div>
                 <div className="flex justify-between items-center mt-1 md:mt-2">
                   <p className="text-xs md:text-sm text-gray-500">

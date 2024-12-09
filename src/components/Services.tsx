@@ -15,7 +15,7 @@ const Services = () => {
           {/* Livraison & Reprise */}
           <div className="flex flex-col items-center mb-8 md:mb-0">
             <img
-              src="/services/1.png"
+              src="/services/1.webp"
               alt="Livraison & Reprise"
               className="h-20 mb-4"
             />
@@ -29,7 +29,7 @@ const Services = () => {
           {/* Nettoyage */}
           <div className="flex flex-col items-center mb-8 md:mb-0">
             <img
-              src="/services/2.png"
+              src="/services/2.webp"
               alt="Nettoyage"
               className="h-20 mb-4"
             />
@@ -43,7 +43,7 @@ const Services = () => {
           {/* Commande Illimitée */}
           <div className="flex flex-col items-center mb-8 md:mb-0">
             <img
-              src="/services/3.png"
+              src="/services/3.webp"
               alt="Commande Illimitée"
               className="h-20 mb-4"
             />
@@ -57,7 +57,7 @@ const Services = () => {
           {/* Transport & Enlèvement */}
           <div className="flex flex-col items-center">
             <img
-              src="/services/4.png"
+              src="/services/4.webp"
               alt="Transport & Enlèvement"
               className="h-20 mb-4"
             />

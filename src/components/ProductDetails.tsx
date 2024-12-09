@@ -5,10 +5,10 @@ import {
 
 const ProductDetails = () => {
   const images = [
-    "/product/image-1.png",
-    "/product/image-2.png",
-    "/product/image-3.png",
-    "/product/image-4.png",
+    "/product/image-1.webp",
+    "/product/image-2.webp",
+    "/product/image-3.webp",
+    "/product/image-4.webp",
   ];
   const [activeImage, setActiveImage] = useState(0);
 
@@ -69,11 +69,11 @@ const ProductDetails = () => {
           {/* Description with Icons */}
           <div className="border-t py-4 text-gray-600 space-y-2">
             <div className="flex items-center">
-              <img src="/icon-1.png" className="h-10 w-10 mr-2" />
+              <img src="/icon-1.webp" className="h-10 w-10 mr-2" />
               <span className="mr-4 text-sm font-semibold">
                 20<sup>cm</sup>
               </span>{" "}
-              <img src="/icon-2.png" className="h-10 w-10 mr-2" />
+              <img src="/icon-2.webp" className="h-10 w-10 mr-2" />
               <span className="mr-4 text-sm font-semibold">
                 50<sup>cm</sup>
               </span>{" "}
